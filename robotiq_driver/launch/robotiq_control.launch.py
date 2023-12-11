@@ -133,7 +133,7 @@ def generate_launch_description():
     robotiq_gripper_controller_spawner = launch_ros.actions.Node(
         package="controller_manager",
         executable="spawner",
-        arguments=["robotiq_gripper_controller", "-c", "/controller_manager"],
+        arguments=["gripper_forward_position_controller", "-c", "/controller_manager"],
     )
 
     robotiq_activation_controller_spawner = launch_ros.actions.Node(

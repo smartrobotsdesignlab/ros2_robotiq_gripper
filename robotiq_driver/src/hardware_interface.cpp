@@ -193,7 +193,7 @@ hardware_interface::CallbackReturn RobotiqGripperHardwareInterface::on_activate(
 
           // Write the latest command to the gripper.
           this->gripper_interface_->setGripperPosition(write_command_.load());
-
+          
           // Read the state of the gripper.
           gripper_current_state_.store(this->gripper_interface_->getGripperPosition());
 
